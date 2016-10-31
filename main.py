@@ -11,8 +11,8 @@
 from PIL import Image, ImageDraw,ImageFont
 import csv
 
-# Main image from base.jpg
-im = Image.open('base.jpg').convert('RGBA')
+# Main image from base.png
+im = Image.open('base.png').convert('RGBA')
 W, H = im.size
 
 MaxSize = 200
@@ -22,7 +22,7 @@ maxFontW = W * .90
 with open('data.csv', 'rb') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for row in spamreader:
-        im = Image.open('base.jpg').convert('RGBA')
+        im = Image.open('base.png').convert('RGBA')
 
         venueSize = MaxSize
         addressSize = MaxSize/2
